@@ -82,7 +82,7 @@ function App() {
           </Button>
         </form>
        
-        {items.length > 0 && <EditableTable data={items}/>}
+        {items.length > 0 && <EditableTable data={items.sort((left, right) => right.timestamp - left.timestamp)}/>}
       </div>
     </div>
   );
